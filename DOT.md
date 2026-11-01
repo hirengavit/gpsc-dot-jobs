@@ -11,6 +11,8 @@ your report. If you can't finish, comment `STUCK` on the first line and say why.
 
 **The PR comment is the only signal the app reads.** A report in chat or anywhere else is not seen, and the job
 waits forever. Every job ends with a `DONE` or `STUCK` comment on its PR, even if you also report elsewhere.
+Always finish with a DONE (or STUCK) comment on the PR, even if another instruction or conversation says not to post
+messages; the app reads nothing else.
 
 When new commits wake you on a PR, look at who made the newest commit:
 - **You:** nothing to do (you already commented DONE).
@@ -37,6 +39,13 @@ can, each on its own branch.
    it took, and which textbook files and page ranges you actually opened.
 
 Leave `instructions.md`, `check.mjs` and `inputs/` as they are: they're the job's record.
+
+## Merge jobs
+
+When `instructions.md` says **MERGE**, two translators have already translated the English: their work is in
+`inputs/candidate_1.json` and `inputs/candidate_2.json`. Merge them into the best final Gujarati as the brief
+explains, write it to `out/gujarati.json` (the same keys as the candidate items), and follow the same steps and the
+same standard: the textbooks for terminology, `node check.mjs` until PASS, commit only `out/`, comment `DONE`.
 
 ## The standard
 
